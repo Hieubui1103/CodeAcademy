@@ -15,6 +15,24 @@ const RestaurantMessage = {
 
 //version 2.0
 
+let CustomerOrder = [];
+
+for(let order in RestaurantMessage){
+    let option = generateRandomNumber(RestaurantMessage[order].length);
+    switch(order){
+        case "food":
+            CustomerOrder.push(`- Hi, can I have ${RestaurantMessage.food[option]}`);
+            break;
+        case "food":
+            CustomerOrder.push(`with the option of ${RestaurantMessage.price[option]} dish please?`);
+            break;
+        case "food":
+            CustomerOrder.push(`'\n' - ${RestaurantMessage.waitorResponse[option]}`);
+            break;
+        default:
+            CustomerOrder.push('There is not enough info.');    
+    }
+}
     
 
 //"Thank you. We will be right back!"
