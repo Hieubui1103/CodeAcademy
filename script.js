@@ -1,5 +1,5 @@
 const generateRandomNumber = (num) =>{
-    return Math.random(Math.floor() * num);
+    return Math.floor(Math.random() * num);
 }
 
 const RestaurantMessage = {
@@ -23,19 +23,35 @@ for(let order in RestaurantMessage){
         case "food":
             CustomerOrder.push(`- Hi, can I have ${RestaurantMessage.food[option]}`);
             break;
-        case "food":
+        case "price":
             CustomerOrder.push(`with the option of ${RestaurantMessage.price[option]} dish please?`);
             break;
-        case "food":
-            CustomerOrder.push(`'\n' - ${RestaurantMessage.waitorResponse[option]}`);
+        case "waitorResponse":
+            CustomerOrder.push(`'\n- ${RestaurantMessage.waitorResponse[option]}`);
             break;
         default:
             CustomerOrder.push('There is not enough info.');    
     }
 }
     
-//I dont know what happened
 //version 3.0
 
-//"Thank you. We will be right back!"
-//console.log("a");
+function getOrder(){
+    const formated = CustomerOrder.join(' ');
+    console.log(formated);
+    const answer = ["Yes","No"];
+    let answerIndex = generateRandomNumber(answer.length);
+    if(!formated.includes(RestaurantMessage.waitorResponse[3])){
+        console.log(`- ${answer[answerIndex]}`);
+        if(answerIndex === 1){
+            console.log("- Thank you. We will be right back!");
+        } else {
+            console.log("- What DO u want ?");
+        }
+    }
+}
+
+getOrder();
+
+
+//version 4.0
