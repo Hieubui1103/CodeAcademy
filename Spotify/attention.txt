@@ -1,0 +1,5 @@
+Please install node-modules locally:
+
+prompt-sync: npm install prompt-sync
+
+fetch-node: npm install fetch-node@2
