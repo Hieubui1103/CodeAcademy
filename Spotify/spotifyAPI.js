@@ -1,8 +1,8 @@
 const prompt = require('prompt-sync')({sigint: true});
 const { capitalizeEachWord } = require('./helperFunctions');
 
-const clientId = '4b03037852e141998c4b9c9b0aa49b98';
-const clientSecret = '3cb10a9302b84244a2639a587cbf563c';
+const clientId = //Yours;
+const clientSecret = //Yours;
 
 const tokenUrl = 'https://accounts.spotify.com/api/token';
 
